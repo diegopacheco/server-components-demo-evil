@@ -1,3 +1,27 @@
+## EVIL
+
+## run
+```
+docker-compose up
+psql -h 127.0.0.1 -p 5432 -U notesadmin -d notesapi
+```
+Go Create db schema. and them:
+```
+npm run seed
+```
+```
+npm run start
+```
+
+## Look no API or API-LESS BS
+```
+1:I{"id":"./src/SearchField.js","chunks":["client2"],"name":""}
+2:I{"id":"./src/EditButton.js","chunks":["client0"],"name":""}
+3:"$Sreact.suspense"
+...
+```
+
+
 # React Server Components Demo
 
 * [What is this?](#what-is-this)

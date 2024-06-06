@@ -12,23 +12,5 @@ services:
       - ./scripts/init_db.sh:/docker-entrypoint-initdb.d/init_db.sh
       - db:/var/lib/postgresql/data
 
-  notes-app:
-    build:
-      context: .
-    depends_on:
-      - postgres
-    ports:
-      - '4000:4000'
-    environment:
-      DB_HOST: postgres
-      PORT: 4000
-    volumes:
-      - ./notes:/opt/notes-app/notes
-      - ./public:/opt/notes-app/public
-      - ./scripts:/opt/notes-app/scripts
-      - ./server:/opt/notes-app/server
-      - ./src:/opt/notes-app/src
-      - ./credentials.js:/opt/notes-app/credentials.js
-
 volumes:
   db:
